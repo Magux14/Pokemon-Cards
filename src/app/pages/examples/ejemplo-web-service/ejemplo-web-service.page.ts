@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericWebResponseModel, SendRequestOptionsModel } from 'src/app/shared-models/generic-web-response.model';
+import { PokemonExampleDetail, PokemonExampleFinalModel } from 'src/app/shared-models/pokemon-example.model';
 import { WebPersonalizedService } from 'src/app/services/web-personalized.service';
 import { WebRestService } from 'src/app/services/web-rest.service';
 import { environment } from 'src/environments/environment';
@@ -15,7 +16,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class EjemploWebServicePage implements OnInit {
 
   public pokemons: Array<any> = []
-  public lstNumbersOfPokemon = [158, 25, 19, 37, 63, 94, 135, 134, 136, 137, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 43, 52, 55, 57, 58, 68, 71, 73, 74, 77, 79, 90, 104, 108, 110, 126, 127, 129, 130, 132, 133, 143, 152, 156, 161, 165, 172, 175, 183, 200, 202, 209, 212, 214, 216, 222, 239, 241, 34, 65, 154, 149, 142, 181]
+  public lstNumbersOfPokemon = [158, 25, 19, 37, 63, 94, 135, 134, 136, 137, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 43, 52, 55, 57, 58, 68, 71, 73, 74, 77, 79, 90, 104, 108, 110, 120, 126, 127, 129, 130, 132, 133, 143, 152, 156, 161, 165, 172, 175, 183, 200, 202, 209, 212, 214, 216, 222, 239, 240, 241, 34, 65, 154, 149, 142, 181]
 
   private countLvl1 = 0;
   private countLvl2 = 0;
