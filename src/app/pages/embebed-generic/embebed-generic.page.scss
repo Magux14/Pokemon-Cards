@@ -1,0 +1,25 @@
+#embebed-container{
+    width: 100%;
+    height: 100vh;
+}
+
+#embebed{
+    width: 100%;
+    height: 100%;
+}
+
+.close-modal{
+    zoom: 1.5;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: var(--ion-color-primary);
+}
+
+.big-spinner{
+    position: absolute;
+    zoom: 5;
+    top: 30%;
+    left: 30%;
+    z-index: 99;
+}

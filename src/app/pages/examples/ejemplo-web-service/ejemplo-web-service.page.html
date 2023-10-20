@@ -1,0 +1,40 @@
+<ion-content>
+
+  <ion-row>
+
+    <ion-col class="padding" size="2.9" *ngFor="let pokemon of pokemons">
+      <div class="card">
+        <!-- <img *ngIf="pokemon.imgUri != null" [src]="pokemon.imgUri" alt="" width="100%"> -->
+        <img *ngIf="pokemon.imgUri != null" [src]="pokemon.imgUri" alt="" class="img">
+
+
+        <ion-row>
+          <ion-col size="8">
+            <div class="ion-text-center">
+              <div class="ion-text-center"><strong>{{pokemon.name | titlecase}}</strong><span class="pknumber">
+                  #{{pokemon.number}}</span>
+              </div>
+              <span class="type" *ngFor="let type of pokemon.types">
+                {{type | titlecase}}
+              </span>
+            </div>
+          </ion-col>
+          <ion-col size="4" class="ion-text-center">
+            <div class="points attack-points">
+              <strong>
+                <ion-icon name="skull-outline"></ion-icon> {{pokemon.attackPoints}}
+              </strong>
+            </div>
+            <div class="padding"></div>
+            <div class="points help-points">
+              <strong>
+                <ion-icon name="rocket-outline"></ion-icon> {{pokemon.helpPoints}}
+              </strong>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

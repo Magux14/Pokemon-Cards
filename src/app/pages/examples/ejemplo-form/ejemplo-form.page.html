@@ -1,0 +1,35 @@
+<custom-header title="Ejemplo Form"></custom-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="validar()" class="ion-padding">
+
+    <ion-item class="ion-item-input">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" formControlName="name">
+      </ion-input>
+    </ion-item>
+    <div class="ion-text-center" *ngFor="let error of mensajesValidacion.name">
+      <ng-container *ngIf="fc.name.hasError(error.type) && (fc.name.dirty || fc.name.touched || submitTried)">
+        <small class="error">{{error.message | translate}}</small>
+      </ng-container>
+    </div>
+
+    <ion-item class="ion-item-input">
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" formControlName="phone">
+      </ion-input>
+    </ion-item>
+    <div class="ion-text-center" *ngFor="let error of mensajesValidacion.phone">
+      <ng-container *ngIf="fc.phone.hasError(error.type) && (fc.phone.dirty || fc.phone.touched || submitTried)">
+        <small class="error">{{error.message | translate}}</small>
+      </ng-container>
+    </div>
+
+    <br><br>
+    <div class="ion-text-center">
+      <ion-button class="boton-principal" type="submit" (click)="submitTried = true"> Finalizar </ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

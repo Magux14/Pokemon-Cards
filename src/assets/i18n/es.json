@@ -1,0 +1,40 @@
+{
+	"i18n_GENERAL": {
+		"label_select_option": "Seleccione una opción",
+		"label_yes": "Sí",
+		"label_no": "No",
+		"label_save": "Guardar",
+		"label_cancel": "Cancelar",
+		"label_confirm": "Aceptar",
+		"label_loading": "Cargando...",
+		"label_close": "Cerrar",
+		"present_alert_accept": "Aceptar",
+		"present_alert_cancel": "Cancelar",
+		"label_session_expired": "La sesión ha expirado.",
+		"button_continue": "Continuar",
+		"button_alert_back": "Regresar",
+		"label_delete": "Eliminar",
+		"label_finalize": "Finalizar"
+	},
+	"i18n_ERROR": {
+		"err_error": "Error",
+		"err_general": "Ha ocurrido un error, favor de intentar más tarde.",
+		"err_complete_data": "Complete los datos para continuar.",
+		"err_geolocation": "No se ha podido obtener su geolocalización, asegúrese de tener activos los permisos correspondientes. Favor de intentar más tarde.",
+		"label_network_err": "Sin conexión a internet"
+	},
+	"i18n_WEEK": {
+		"label_monday": "Lunes",
+		"label_tuesday": "Martes",
+		"label_wednesday": "Miércoles",
+		"label_thursday": "Jueves",
+		"label_friday": "Viernes",
+		"label_saturday": "Sábado",
+		"label_sunday": "Domingo"
+	},
+	"i18n_EJEMPLO_FORM": {
+		"label_err_message_name_required": "Nombre obligatorio",
+		"label_err_message_phone_required": "Teléfono obligatorio",
+		"label_err_message_phone_pattern": "Teléfono inválido"
+	}
+}

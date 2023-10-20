@@ -1,0 +1,7 @@
+{
+  "name": "Ionic 6 Angular Template",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

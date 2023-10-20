@@ -1,0 +1,5 @@
+<div *ngIf="version" [class]="color == 'black'? 'ion-text-center black': 'ion-text-center white'">
+  V{{version + " " + (dev? "(Dev)": "")}}
+  <br>
+  <img *ngIf="firebaseLog" src="assets/img/firebase.png" width="15" height="15" alt="">
+</div>

@@ -1,0 +1,12 @@
+<ion-content>
+  <div *ngIf="isIOS">
+    <br><br>
+  </div>
+  <div class="ion-float-right">
+    <ion-icon name="close-circle" class="close-modal" (click)="close()"></ion-icon>
+  </div>
+  <div id="embebed-container" class="{{padding? 'ion-padding': ''}}">
+    <iframe id="embebed" [src]="sanitizedEmbebedUrl" title="Web" allow="geolocation"></iframe>
+    <ion-spinner *ngIf="loading" name="dots" class="big-spinner"></ion-spinner>
+  </div>
+</ion-content>

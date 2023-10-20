@@ -1,0 +1,26 @@
+<custom-header title="Ejemplo Plugin Capacitor Geolocation"></custom-header>
+
+<ion-content>
+  <div class="ion-text-center ion-padding">
+    Posición actual:
+    <br><br>
+
+    <div *ngIf="latLng == null">
+      <ion-spinner></ion-spinner>
+    </div>
+
+    <div *ngIf="latLng != null">
+      {{latLng.lat}}, {{latLng.lng}}
+    </div>
+
+
+    <br><br>
+    <div class="ion-text-center">
+      <ion-button (click)="fcmTest()">FMC</ion-button>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <app-version></app-version>
+  </div>
+  <waves></waves>
+</ion-content>

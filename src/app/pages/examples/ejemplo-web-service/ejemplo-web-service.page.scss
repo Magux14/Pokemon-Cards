@@ -1,0 +1,42 @@
+.card {
+  border: 10px solid black;
+  height: 200px;
+}
+
+.padding {
+  padding: 1px;
+}
+
+.img {
+  height: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.type {
+  font-size: 10px;
+  color: white;
+  background: rgb(66, 66, 66);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.pknumber {
+  color: grey;
+  font-size: 10px;
+}
+
+.points {
+  padding: 4px;
+  color: white;
+  border-radius: 5px;
+}
+
+.attack-points {
+  background: rgb(172, 30, 30);
+}
+
+.help-points {
+  background: rgb(30, 163, 30);
+}

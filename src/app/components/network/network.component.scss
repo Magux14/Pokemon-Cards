@@ -1,0 +1,12 @@
+.no-network{
+    background: rgb(29, 29, 95);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.ios-network-space{
+    margin-top: 20px; /* Status bar height on iOS 10 */
+    margin-top: constant(safe-area-inset-top); /* Status bar height on iOS 11.0 */
+    margin-top: env(safe-area-inset-top); /* Status bar height on iOS 11+ */
+}

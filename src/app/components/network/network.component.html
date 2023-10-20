@@ -1,0 +1,8 @@
+<div *ngIf="!isIOS && !hasInternet" class="no-network ion-text-center">
+  {{'i18n_ERROR.label_network_err' | translate}}
+</div>
+<div *ngIf="isIOS && !hasInternet" class="no-network ion-text-center ios-network-space">
+  {{'i18n_ERROR.label_network_err' | translate}}
+</div>
+<div *ngIf="isIOS && hasInternet" class="ios-network-space">
+</div>

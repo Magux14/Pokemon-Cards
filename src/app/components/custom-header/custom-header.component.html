@@ -1,0 +1,14 @@
+<network></network>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons *ngIf="back == true" slot="start">
+      <ion-back-button class="flat botones-header" mode="md" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title size="small" class="ion-text-center">
+      {{title | translate}}
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>

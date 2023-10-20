@@ -1,0 +1,18 @@
+<custom-header title="Ejemplo de parámetros recibidos" [back]="true"></custom-header>
+
+<ion-content>
+  <div *ngIf="data != null" class="ion-text-center ion-padding">
+    Name: {{data.name}}
+    <br><br>
+    Age: {{data.age}}
+    <br><br>
+    Hobbies:
+    <br>
+    <div *ngFor="let hobbie of data.hobbies">
+      {{hobbie}}
+    </div>
+    <br><br>
+  </div>
+
+
+</ion-content>
