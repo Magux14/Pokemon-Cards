@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericWebResponseModel, SendRequestOptionsModel } from 'src/app/shared-models/generic-web-response.model';
-import { PokemonExampleDetail, PokemonExampleFinalModel } from 'src/app/shared-models/pokemon-example.model';
 import { WebPersonalizedService } from 'src/app/services/web-personalized.service';
 import { WebRestService } from 'src/app/services/web-rest.service';
 import { environment } from 'src/environments/environment';
@@ -16,11 +15,13 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class EjemploWebServicePage implements OnInit {
 
   public pokemons: Array<any> = []
-  public lstNumbersOfPokemon = [158, 25, 19, 37, 63, 94, 135, 134, 136, 137, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 43, 52, 55, 57, 58, 68, 71, 73, 74, 77, 79, 90, 104, 108, 110, 120, 126, 127, 129, 130, 132, 133, 143, 152, 156, 161, 165, 172, 175, 183, 200, 202, 209, 212, 214, 216, 222, 239, 240, 241, 34, 65, 154, 149, 142, 181]
+  public lstNumbersOfPokemon = [150, 244, 245, 144, 145, 146, 249, 250, 158, 25, 19, 37, 63, 94, 135, 134, 136, 137, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 43, 52, 55, 57, 58, 68, 71, 73, 74, 77, 79, 90, 104, 108, 110, 120, 126, 127, 129, 130, 132, 133, 143, 152, 156, 161, 165, 172, 175, 183, 200, 202, 209, 212, 214, 216, 222, 239, 240, 241, 34, 65, 154, 149, 142, 181]
 
   private countLvl1 = 0;
   private countLvl2 = 0;
   private countLvl3 = 0;
+  private countLvl4 = 0;
+  private countLvl5 = 0;
   //-------------------------------------------------------------------------------------------------------------------
   constructor(
     private webPersonalizedService: WebPersonalizedService,
@@ -115,15 +116,28 @@ export class EjemploWebServicePage implements OnInit {
 
         let helpPoints = 0;
         let attackPoints = 0;
+
+        // legendarios
+        if ([150, 244, 245, 144, 145, 146, 249, 250,].includes(pokemon.number)) {
+          pokemonDetail.base_experience += 150;
+        }
+
+
         if (pokemonDetail.base_experience < 100) {
           helpPoints = 1;
           this.countLvl1++;
         } else if (pokemonDetail.base_experience < 200) {
           helpPoints = 2;
           this.countLvl2++;
-        } else {
+        } else if (pokemonDetail.base_experience < 300) {
           helpPoints = 3;
           this.countLvl3++;
+        } else if (pokemonDetail.base_experience < 400) {
+          helpPoints = 4;
+          this.countLvl4++;
+        } else {
+          helpPoints = 5;
+          this.countLvl5++;
         }
 
         if (pokemonDetail.base_experience < 80) {
@@ -136,8 +150,12 @@ export class EjemploWebServicePage implements OnInit {
           attackPoints = 9;
         } else if (pokemonDetail.base_experience < 250) {
           attackPoints = 10;
-        } else {
+        } else if (pokemonDetail.base_experience < 300) {
           attackPoints = 11;
+        } else if (pokemonDetail.base_experience < 400) {
+          attackPoints = 12;
+        } else {
+          attackPoints = 19;
         }
 
         this.pokemons[index].attackPoints = attackPoints;
@@ -146,7 +164,9 @@ export class EjemploWebServicePage implements OnInit {
         console.log('countLvl1: ' + this.countLvl1);
         console.log('countLvl2: ' + this.countLvl2);
         console.log('countLvl3: ' + this.countLvl3);
-        console.log('total: ' + (this.countLvl1 + this.countLvl2 + this.countLvl3));
+        console.log('countLvl4: ' + this.countLvl4);
+        console.log('countLvl5: ' + this.countLvl5);
+        console.log('total: ' + (this.countLvl1 + this.countLvl2 + this.countLvl3 + this.countLvl4 + this.countLvl5));
       });
     });
   }
