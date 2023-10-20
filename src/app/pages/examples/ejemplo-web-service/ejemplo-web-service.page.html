@@ -4,7 +4,6 @@
 
     <ion-col class="padding" size="3" *ngFor="let pokemon of pokemons">
       <div class="card">
-        <!-- <img *ngIf="pokemon.imgUri != null" [src]="pokemon.imgUri" alt="" width="100%"> -->
         <img *ngIf="pokemon.imgUri != null" [src]="pokemon.imgUri" alt="" class="img">
 
         <ion-row class="info-card">
@@ -41,6 +40,74 @@
         </ion-row>
       </div>
     </ion-col>
+
+    <!-- pokebolas -->
+    <ion-col class="padding" size="3" *ngFor="let pokemon of [1,2,3,4,5,6,7,8,9,10]">
+      <div class="card">
+        <img
+          [src]="'https://vader.news/__export/1588965166057/sites/gadgets/img/2020/05/08/2-25193_pokemon-ball-transparent-background-transparent-background-pokeball-png.png_423682103.png'"
+          alt="" class="img">
+        <ion-row class="info-card">
+          <ion-col size="12">
+            <div class="ion-text-center name-container">
+              <div class="ion-text-center">
+                <strong class="name">Pokebola</strong>
+                <br>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+
+    <!-- great balls -->
+    <ion-col class="padding" size="3" *ngFor="let pokemon of [1,2,3,4,5,6,7,8]">
+      <div class="card">
+        <img
+          [src]="'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c861d306-8f42-4864-ab2e-61a271518c8a/df3b5yi-fe566d48-3f67-4034-8b5a-1fb220c3e265.png/v1/fill/w_1280,h_1281/great_ball_by_ace_zeroartic_df3b5yi-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2M4NjFkMzA2LThmNDItNDg2NC1hYjJlLTYxYTI3MTUxOGM4YVwvZGYzYjV5aS1mZTU2NmQ0OC0zZjY3LTQwMzQtOGI1YS0xZmIyMjBjM2UyNjUucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.b3kIK8k3LJLj_V5OEDx80t8555WTJXtiFDxhIojCPAA'"
+          alt="" class="img">
+        <ion-row class="info-card">
+          <ion-col size="12">
+            <div class="ion-text-center name-container">
+              <div class="ion-text-center">
+                <strong class="name">Great Ball</strong>
+                <br>
+                Utiliza esta carta cuando vayas a atrapar a un pokémon, le agrega a tu tiro de dados 2 puntos en la fase
+                de batalla, si no lo vences esta carta irá a la tienda.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+
+    <!-- ultra balls y master ball-->
+    <ion-col class="padding" size="3" *ngFor="let pokemon of [1,2,3,4,5,6,7,8]; let i = index;">
+      <div class="card">
+        <img *ngIf="i != 7"
+          [src]="'https://images.wikidexcdn.net/mwuploads/wikidex/c/c9/latest/20090125150713/Ultra_Ball_%28Ilustraci%C3%B3n%29.png'"
+          alt="" class="img">
+        <img *ngIf="i == 7"
+          [src]="'https://images.wikidexcdn.net/mwuploads/wikidex/a/a9/latest/20120802225204/Master_Ball_%28Ilustraci%C3%B3n%29.png'"
+          alt="" class="img">
+        <ion-row class="info-card">
+          <ion-col size="12">
+            <div class="ion-text-center name-container">
+              <div class="ion-text-center">
+                <strong *ngIf="i != 7" class="name">Ultra Ball</strong>
+                <strong *ngIf="i == 7" class="name">Master Ball</strong>
+                <br>
+                <span *ngIf="i != 7">Utiliza esta carta cuando vayas a atrapar a un pokémon, le agrega a tu tiro de
+                  dados 4 puntos en la fase de batalla, si no lo vences esta carta irá a la tienda.</span>
+                <span *ngIf="i == 7">Utiliza esta carta cuando vayas a atrapar a un pokémon, no necesitas batallar lo
+                  atrapa en seguida.</span>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+
   </ion-row>
 
 </ion-content>
