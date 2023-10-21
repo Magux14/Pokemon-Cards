@@ -8,19 +8,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppVersionComponent } from './app-version/app-version.component';
 import { NetworkComponent } from './network/network.component';
 import { WavesComponent } from './waves/waves.component';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
   declarations: [
     CustomHeaderComponent,
     AppVersionComponent,
     NetworkComponent,
-    WavesComponent
+    WavesComponent,
+    ItemCardComponent
   ],
   exports: [
     CustomHeaderComponent,
     AppVersionComponent,
     NetworkComponent,
-    WavesComponent
+    WavesComponent,
+    ItemCardComponent
   ],
   imports: [
     CommonModule,

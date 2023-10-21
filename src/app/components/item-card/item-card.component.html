@@ -1,0 +1,18 @@
+<ion-col class="padding" size="3">
+  <div class="card">
+    <img [src]="url" alt="" class="img">
+    <ion-row class="info-card">
+      <ion-col size="12">
+        <div class="ion-text-center name-container">
+          <div class="ion-text-center">
+            <span class="tipo">{{tipo}}</span>
+            <br>
+            <strong class="name">{{nombre}}<span *ngIf="precio"> ${{precio}}</span></strong>
+            <br>
+            {{descripcion}}
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-col>

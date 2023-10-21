@@ -51,7 +51,7 @@
           <ion-col size="12">
             <div class="ion-text-center name-container">
               <div class="ion-text-center">
-                <strong class="name">Pokebola</strong>
+                <strong class="name">Pokebola $100</strong>
                 <br>
               </div>
             </div>
@@ -70,7 +70,7 @@
           <ion-col size="12">
             <div class="ion-text-center name-container">
               <div class="ion-text-center">
-                <strong class="name">Great Ball</strong>
+                <strong class="name">Great Ball $150</strong>
                 <br>
                 Utiliza esta carta cuando vayas a atrapar a un pokémon, le agrega a tu tiro de dados 2 puntos en la fase
                 de batalla, si no lo vences esta carta irá a la tienda.
@@ -94,7 +94,7 @@
           <ion-col size="12">
             <div class="ion-text-center name-container">
               <div class="ion-text-center">
-                <strong *ngIf="i != 7" class="name">Ultra Ball</strong>
+                <strong *ngIf="i != 7" class="name">Ultra Ball $200</strong>
                 <strong *ngIf="i == 7" class="name">Master Ball</strong>
                 <br>
                 <span *ngIf="i != 7">Utiliza esta carta cuando vayas a atrapar a un pokémon, le agrega a tu tiro de
@@ -107,6 +107,40 @@
         </ion-row>
       </div>
     </ion-col>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2,3,4]" tipo="Item" nombre="Revivir"
+      descripcion="Rehabilita a un pokémon de tu equipo." precio="100"
+      url="https://i.pinimg.com/originals/9c/76/cc/9c76cc77a0c2b70c90197c7adee88199.png"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2]" tipo="Item" nombre="Teleport"
+      descripcion="Intercambia lugar con otro jugador de tu elección." precio="200"
+      url="https://img.game8.co/3456551/f432f07894a5bfbcd81cda8ec7d76d11.png/show"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2]" tipo="Item" nombre="Intercambio injusto"
+      descripcion="Seleccione a otro jugador, y selecciona un pokemón de su equipo, lo cambiarás por uno del tuyo"
+      precio="350"
+      url="https://images.wikidexcdn.net/mwuploads/wikidex/7/74/latest/20100907141425/EP263_M%C3%A1quina_de_intercambio_port%C3%A1til.png"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2]" tipo="Item" nombre="Volar"
+      descripcion="Posicionate en cualquier posición del tablero, en este turno no tirarás los dados para avanzar y entrarás en el evento de la casilla que caigas (si pasas por el inicio no cobras)"
+      precio="250"
+      url="https://static.guidestrats.com/images/11/350/00-featured-pokemon-oras-using-fly-outside-combat.jpg"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2,3,4]" tipo="Item" nombre="Bicicleta"
+      descripcion="Al tirar los dados para avanzar los puntos obtenidos se duplican" precio="150"
+      url="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f4/latest/20190412005056/Bicicleta_en_la_primera_generaci%C3%B3n_artwork.png/190px-Bicicleta_en_la_primera_generaci%C3%B3n_artwork.png"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2,3,4]" tipo="Carta Rápida" nombre="Rare Candy"
+      descripcion="Aumenta el poder de tu pokémon + 2 en una batalla contra un entrenador"
+      url="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0ab12834-cebb-4832-80fc-780aad043d90/d8nyvh0-36d37aca-c3ea-4a1c-b6b7-32d704657046.png/v1/fill/w_567,h_567/rare_candy_by_peetzaahhh2010_d8nyvh0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTY3IiwicGF0aCI6IlwvZlwvMGFiMTI4MzQtY2ViYi00ODMyLTgwZmMtNzgwYWFkMDQzZDkwXC9kOG55dmgwLTM2ZDM3YWNhLWMzZWEtNGExYy1iNmI3LTMyZDcwNDY1NzA0Ni5wbmciLCJ3aWR0aCI6Ijw9NTY3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.7dRZaJ1id4o0ZZ5P5roacc1rL1PxLsw7CD2zQPWJatU"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2,3,4]" tipo="Carta Rápida" nombre="¡Solo diga NO!"
+      descripcion="Invalide alguna acción de otro jugador (no aplica para avanzar normalmente en el tablero)"
+      url="https://www.enter.co/wp-content/uploads/2023/02/1366_2000-3.jpeg"></app-item-card>
+
+    <app-item-card class="padding" *ngFor="let item of [1,2]" tipo="Carta Rápida" nombre="Pokefind"
+      descripcion="Al momento en que caigas en el césped activa esta carta y podrás buscar un pokémon en el deck al que te quieras enfrentar. (el deck se barajea después de esto.)"
+      url="https://images.wikidexcdn.net/mwuploads/wikidex/e/e2/latest/20230122133405/Lupa_EP.png"></app-item-card>
 
   </ion-row>
 
