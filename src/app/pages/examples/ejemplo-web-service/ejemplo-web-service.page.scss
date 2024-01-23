@@ -6,6 +6,7 @@
 
 .name {
   font-size: 2.2em;
+  color: white;
 }
 
 .padding {
@@ -48,10 +49,39 @@
 }
 
 .info-card {
-  background: rgb(233, 233, 233);
+  border: 10px rgb(7, 10, 36) solid;
+  background: rgb(31, 38, 71);
   height: 30%;
 }
 
 .name-container {
   padding: .5em;
+}
+
+.background-flying {
+  background: url('/assets/img/background-flying.png') 0 0/100% 100% no-repeat;
+}
+
+.background-ghost {
+  background: url('/assets/img/background-ghost.png') 0 0/100% 100% no-repeat;
+}
+
+.background-fire {
+  background: url('/assets/img/background-fire.png') 0 0/100% 100% no-repeat;
+}
+
+.background-water {
+  background: url('/assets/img/background-water.png') 0 0/100% 100% no-repeat;
+}
+
+.background-ground {
+  background: url('/assets/img/background-ground.png') 0 0/100% 100% no-repeat;
+}
+
+.background-psychic {
+  background: url('/assets/img/background-psychic.png') 0 0/100% 100% no-repeat;
+}
+
+.background-normal {
+  background: url('/assets/img/background.png') 0 0/100% 100% no-repeat;
 }

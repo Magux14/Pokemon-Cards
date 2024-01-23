@@ -80,6 +80,27 @@ export class EjemploWebServicePage implements OnInit {
   // }
 
   //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  private assignBackgroundCssClass(types: string[]): string {
+    let cssClass: string = 'background';
+    if (types.includes('water')) {
+      cssClass += '-water';
+    } else if (types.includes('fire')) {
+      cssClass += '-fire';
+    } else if (types.includes('ghost')) {
+      cssClass += '-ghost';
+    } else if (types.includes('flying')) {
+      cssClass += '-flying';
+    } else if (types.includes('rock') || types.includes('ground')) {
+      cssClass += '-ground';
+    } else if (types.includes('psychic')) {
+      cssClass += '-psychic';
+    } else {
+      cssClass += '-normal';
+    }
+    return cssClass;
+  }
+
+  //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   public async getPokemon() {
     let response: GenericWebResponseModel = await this.webPersonalizedService.getAsync(environment.uri.pokemon.list);
     if (!response.success)
@@ -113,6 +134,7 @@ export class EjemploWebServicePage implements OnInit {
         const temp = pokemonDetail.types as any;
         this.pokemons[index] = { ...this.pokemons[index], ...pokemonDetail };
         this.pokemons[index].types = temp.map(item => item.type.name);
+        this.pokemons[index].cssClass = this.assignBackgroundCssClass(this.pokemons[index].types);
 
         let helpPoints = 0;
         let attackPoints = 0;
