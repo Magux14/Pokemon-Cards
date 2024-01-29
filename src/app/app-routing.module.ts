@@ -5,7 +5,8 @@ import { DataParamResolverService } from './services/params/data-param-resolver.
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/examples/ejemplo-web-service/ejemplo-web-service.module').then(m => m.EjemploWebServicePageModule)
+    // loadChildren: () => import('./pages/examples/ejemplo-web-service/ejemplo-web-service.module').then(m => m.EjemploWebServicePageModule)
+    loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then( m => m.CountToZeroPageModule)
     // loadChildren: () => import('./pages/ejemplo-params/ejemplo-params.module').then(m => m.EjemploParamsPageModule)
   },
   {
@@ -30,7 +31,12 @@ const routes: Routes = [
       data: DataParamResolverService
     },
     loadChildren: () => import('./pages/examples/ejemplo-param-recibido/ejemplo-param-recibido.module').then(m => m.EjemploParamRecibidoPageModule)
+  },
+  {
+    path: 'count-to-zero',
+    loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then( m => m.CountToZeroPageModule)
   }
+
 ];
 @NgModule({
   imports: [

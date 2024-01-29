@@ -1,0 +1,38 @@
+
+
+ion-content {
+  --background: url('/assets/img/background-amor.png') 0 0/100% 100% no-repeat;
+  font-size: 12px;
+  font-family: 'Times New Roman', serif;
+  
+}
+
+.flex-center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#counter {
+    font-size: 5em;
+}
+
+.warning {
+    color: rgb(153, 87, 33);
+}
+
+.danger {
+    color: rgb(124, 0, 0);
+}
+
+.instructions {
+    border: 3px rgb(128, 30, 71) solid;
+    background: rgba(255, 255, 255, 0.733);
+    border-radius: 5px;
+}
+
+ion-button {
+    --background: rgb(128, 30, 71);
+    --background-hover: rgb(109, 65, 83);
+}

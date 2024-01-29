@@ -1,0 +1,27 @@
+<ion-content>
+
+  <ion-row style="height: 100%;">
+    <ion-col size="3" class="instructions">
+      <img src="/assets/img/count-to-zero.png" alt="" />
+
+
+      <div class="flex-center-container">
+        <h2>Clases Para Besar</h2>
+        <p>Me han dicho que eres un mal besador... para dar un buen beso necesitas acercarte a la chica, sin besarla, lo
+          más cerca posible hasta el último segundo.</p>
+        <p>Detente justo antes de que el contador llegue a cero, si llegas a 0 o te pasas, serás un mal besador.</p>
+      </div>
+
+    </ion-col>
+    <ion-col size="9" class="flex-center-container">
+      <div class="instructions ion-padding">
+        <span id="counter" [class]="counter < 0? 'danger': ''">{{counter}}</span>
+      </div>
+      <ion-button *ngIf="!gameFinished && counter == defaultCounter" (click)="startCounter()">Empezar</ion-button>
+      <ion-button *ngIf="!gameFinished && counter != defaultCounter" (click)="stop()">Detenerte</ion-button>
+      <ion-button *ngIf="gameFinished" (click)="gameFinished = false; startCounter()">Reintentar</ion-button>
+      <p *ngIf="gameFinished" class="instructions ion-padding"> {{review}}</p>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

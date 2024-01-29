@@ -15,7 +15,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class EjemploWebServicePage implements OnInit {
 
   public pokemons: Array<any> = []
-  public lstNumbersOfPokemon = [150, 244, 245, 144, 145, 146, 249, 250, 158, 25, 19, 37, 63, 94, 135, 134, 136, 137, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 43, 52, 55, 57, 58, 68, 71, 73, 74, 77, 79, 90, 104, 108, 110, 120, 126, 127, 129, 130, 132, 133, 143, 152, 156, 161, 165, 172, 175, 183, 200, 202, 209, 212, 214, 216, 222, 239, 240, 241, 34, 65, 154, 149, 142, 181]
+  public lstNumbersOfPokemon = [249, 250, 158, 25, 37, 63, 94, 135, 134, 136, 1, 6, 8, 10, 15, 18, 24, 27, 32, 39, 55, 57, 73, 74, 77, 79, 90, 104, 108, 110, 126, 129, 132, 143, 152, 156, 161, 172, 175, 183, 200, 202, 212, 214, 222, 34, 65, 149]
 
   private countLvl1 = 0;
   private countLvl2 = 0;
@@ -183,6 +183,8 @@ export class EjemploWebServicePage implements OnInit {
         this.pokemons[index].attackPoints = attackPoints;
         this.pokemons[index].helpPoints = helpPoints;
         this.pokemons[index].name = pokemonDetail.name;
+        this.pokemons[index].base_experience = pokemonDetail.base_experience;
+        console.log('-----------');
         console.log('countLvl1: ' + this.countLvl1);
         console.log('countLvl2: ' + this.countLvl2);
         console.log('countLvl3: ' + this.countLvl3);
@@ -191,6 +193,11 @@ export class EjemploWebServicePage implements OnInit {
         console.log('total: ' + (this.countLvl1 + this.countLvl2 + this.countLvl3 + this.countLvl4 + this.countLvl5));
       });
     });
+
+    setTimeout(() =>{
+      this.pokemons = this.pokemons.sort((a, b) => a.base_experience - b.base_experience);
+    }, 2_000);
+    
   }
 
   //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

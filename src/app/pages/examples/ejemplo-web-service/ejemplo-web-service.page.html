@@ -2,26 +2,26 @@
 
   <ion-row>
 
-    <ion-col class="padding" size="3" *ngFor="let pokemon of pokemons">
+    <ion-col class="padding" size="2" *ngFor="let pokemon of pokemons">
       <div class="{{'card ' + pokemon.cssClass}}" >
         <img *ngIf="pokemon.imgUri != null" [src]="pokemon.imgUri" alt="" class="img">
 
         <ion-row class="info-card">
           <ion-col size="8">
             <div class="ion-text-center name-container">
-              <div class="ion-text-center"><strong class="name">{{pokemon.name | titlecase}}</strong><span
-                  class="pknumber">
-                  #{{pokemon.number}}</span>
+              <div class="ion-text-center">
+                <strong class="name"> {{pokemon.name | titlecase}}</strong>
+                <span class="pknumber"> #{{pokemon.number}}</span>
               </div>
             </div>
             <ion-row class="ion-text-center">
-              <ion-col size="2"></ion-col>
+              <!-- <ion-col size="2"></ion-col> -->
               <ion-col *ngFor="let type of pokemon.types">
                 <div class="type">
                   {{type | titlecase}}
                 </div>
               </ion-col>
-              <ion-col size="2"></ion-col>
+              <!-- <ion-col size="2"></ion-col> -->
             </ion-row>
           </ion-col>
           <ion-col size="4" class="ion-text-center">

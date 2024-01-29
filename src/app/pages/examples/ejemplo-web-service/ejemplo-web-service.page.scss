@@ -1,11 +1,13 @@
+// Para sacar screenshot es de la pantalla sceptre 150%
+
 .card {
   border: 10px solid black;
-  height: 520px;
-  width: 470px;
+  height: 210px;
+  width: 210px;
 }
 
 .name {
-  font-size: 2.2em;
+  font-size: 1.1em;
   color: white;
 }
 
@@ -14,30 +16,31 @@
 }
 
 .img {
-  height: 70%;
+  height: 65%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .type {
-  font-size: 1.2em;
+  font-size: 0.7em;
   color: white;
   background: rgb(66, 66, 66);
   border-radius: 5px;
-  padding: .5em;
+  padding: 0.2em;
 }
 
 .pknumber {
   color: grey;
-  font-size: 1.2em;
+  font-size: 0.7em;
+  position: absolute;
 }
 
 .points {
   padding: 4px;
   color: white;
   border-radius: 5px;
-  font-size: 2.4em;
+  font-size: 1em;
 }
 
 .attack-points {
@@ -49,13 +52,14 @@
 }
 
 .info-card {
-  border: 10px rgb(7, 10, 36) solid;
+  // border: 10px rgb(7, 10, 36) solid;
   background: rgb(31, 38, 71);
-  height: 30%;
+  height: 35%;
 }
 
 .name-container {
-  padding: .5em;
+  position: relative;
+  padding: 0.2em;
 }
 
 .background-flying {
