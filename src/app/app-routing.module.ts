@@ -5,8 +5,8 @@ import { DataParamResolverService } from './services/params/data-param-resolver.
 const routes: Routes = [
   {
     path: '',
-    // loadChildren: () => import('./pages/examples/ejemplo-web-service/ejemplo-web-service.module').then(m => m.EjemploWebServicePageModule)
-    loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then( m => m.CountToZeroPageModule)
+    loadChildren: () => import('./pages/examples/ejemplo-web-service/ejemplo-web-service.module').then(m => m.EjemploWebServicePageModule)
+    // loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then( m => m.CountToZeroPageModule)
     // loadChildren: () => import('./pages/ejemplo-params/ejemplo-params.module').then(m => m.EjemploParamsPageModule)
   },
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'count-to-zero',
-    loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then( m => m.CountToZeroPageModule)
+    loadChildren: () => import('./pages/count-to-zero/count-to-zero.module').then(m => m.CountToZeroPageModule)
   }
 
 ];
